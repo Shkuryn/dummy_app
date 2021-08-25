@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lotex - get your lot today!</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <%= render "shared/favicon" %>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbo-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload' %>
+  </head>
+
+  <body class="h-screen relative bg-white">
+    <div class="main container mx-auto">
+      <%= render "shared/alerts" %>
+      <%= render "shared/header" %>
+
+      <div class="px-3 lg:px-0">
+        <%= yield %>
+      </div>
+    </div>
+
+    <%= render "shared/footer" %>
+  </body>
+</html>
